@@ -15,10 +15,9 @@ public class Program {
         Developer frontEnder = new FrontEnderDev();
         Developer frontEnder2 = new FrontEnderDev();
 
-
         List<Developer> list = Arrays.asList(fullStackDeveloper, backEnder, frontEnder, frontEnder2);
 
-        for (Developer item: list) {
+        for (Developer item : list) {
             if (item instanceof FrontEnder) {
                 ((FrontEnder) item).createFront();
                 System.out.println();
@@ -26,8 +25,8 @@ public class Program {
                 ((BackEnder) item).createServer();
                 System.out.println();
             } else {
-                ((DeveloperFullStack)fullStackDeveloper).createServer();
-                ((DeveloperFullStack)fullStackDeveloper).createFront();
+                ((DeveloperFullStack) fullStackDeveloper).createServer();
+                ((DeveloperFullStack) fullStackDeveloper).createFront();
                 System.out.println();
             }
         }
@@ -35,7 +34,7 @@ public class Program {
     }
 }
 
-abstract class Developer{
+abstract class Developer {
     public static int count = 0;
     int id;
     {
@@ -43,11 +42,11 @@ abstract class Developer{
     }
 }
 
-interface BackEnder{
+interface BackEnder {
     void createServer();
 }
 
-interface FrontEnder{
+interface FrontEnder {
     void createFront();
 }
 
